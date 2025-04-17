@@ -92,6 +92,7 @@
               <p class="card-text"><%= review.comment %></p>
               
             </div>
+<% if(currUser && review.author._id.equals(currUser._id)){ %>
             <form
              class="mb-3" 
              method="POST" 
@@ -99,6 +100,7 @@
               >
               <button class="btn btn-sm btn-dark">Delete</button>
             </form>
+<% } %>
           </div>
          <% } %>
         </div>
@@ -112,5 +114,3 @@
   </div>
 
   <script src="/js/map.js"></script>
-
-  
