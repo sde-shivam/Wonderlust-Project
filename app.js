@@ -62,9 +62,9 @@ const dbUrl = process.env.ATLASDB_URL;
       } 
       };
 
-      // app.get("/",(req,res)=>{
-      // res.send("root is working");
-      // });
+      app.get("/",(req,res)=>{
+      res.redirect("/listings");
+      });
 
        
      app.use(session(sessionOptions))
