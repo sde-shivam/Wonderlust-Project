@@ -138,6 +138,29 @@ body{
 .review-card{
     text-align: justify;
 }
+/* .container{
+    background-color: red;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    
+}
+.card,card-wrapper{
+    width: 100%;
+    max-width: 100%;
+} */
+*{
+    box-sizing: border-box;
+}
+ body,html{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+
+}
 @media (max-width:770px){
     #map{
         height:17rem;
