@@ -47,7 +47,7 @@
       <form action="/listings/<%= listing.id %>/reviews" method="POST" novalidate class="needs-validation">
         
       <div class="mb-3 mt-3">
-              <label for="rating" class="form-label">Rating</label>
+      <label for="rating" class="form-label">Rating</label>
       <fieldset class="starability-slot">
        <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
        <input type="radio" id="first-rate1" name="review[rating]" value="1" />
@@ -82,15 +82,16 @@
       <% } %>
        
         <% if(listing.reviews.length>0) {%>
-        <div class="row">
+        <div class="row review-card">
         <p><b>All Reviews</b></p>
          <% for(review of listing.reviews) {%>
-          <div class="card col-5 ms-3 mb-3">
+          <div class="card col-5 ms-3 mb-3 review-box p-3" >
             <div class="card-body">
               <h5 class="card-title">@<%= review.author.username %></h5>
+              <cite class="review-date"><%= new Date(review.createdAt).toLocaleDateString("en-IN") %></cite>
               <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
               <p class="card-text"><%= review.comment %></p>
-              
+               
             </div>
 <% if(currUser && review.author._id.equals(currUser._id)){ %>
             <form

@@ -123,5 +123,32 @@ body{
 /* Map */
 #map {
     height: 400px;
-    width: 80vh;
+    width: 90%;
+    
 }
+/* Review Date */
+.review-date{
+   opacity: 0.5;
+   margin-left: 5px;
+   display: flex;
+   gap: 2px;
+   font-size: 13px;
+}
+/* Review card */
+.review-card{
+    text-align: justify;
+}
+@media (max-width:770px){
+    #map{
+        height:17rem;
+        width:16rem;
+        
+    }
+    .review-card{
+     width:600px;
+     display: flex;
+     flex-direction: column;
+     
+    }
+  }
+
