@@ -78,21 +78,13 @@ const dbUrl = process.env.ATLASDB_URL;
      passport.deserializeUser(User.deserializeUser());
 
      app.use((req, res, next) => {
+       console.log("User in res.locals middleware:", req.user);
        res.locals.success = req.flash("success");
        res.locals.error = req.flash("error");
        res.locals.currUser = req.user;
        next();
       })
 
-    //  app.get("/demouser", async(req, res) => {
-    //  let fakeUser = new User({
-    //    email: "student@gmail.com",
-    //    username: "delta-student"
-    //  })
-       
-    //   let registeredUser = await User.register(fakeUser,"helloworld")
-    //   res.send(registeredUser)
-    //  })
 
      app.use("/listings", listingRouter);
      app.use("/listings/:id/reviews", reviewRouter)

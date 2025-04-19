@@ -30,9 +30,38 @@
       border-radius: 1rem;
       height: 3rem;
       padding:1rem ;
-      margin-left: 2.5rem;
+      margin-left: 3.7rem;
       display: flex;
       align-items: center;
+     }
+     @media (max-width:770px) {
+      .filters{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .filter{
+        flex:1 1 calc(20% - 1rem);
+        text-align: center;
+        opacity: 0.7;
+      }
+
+      
+     }
+     @media (max-width:380px) {
+      .tax-toggle{
+        border: none;
+        height: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 55px ;
+      }
+      .tax-toggle .form-check-label{
+        display: none;
+      }
      }
     </style>   
 
@@ -69,10 +98,7 @@
         <div><i class="fa-solid fa-cow"></i></div>
         <p>Farms</p>
       </div>
-      <div class="filter">
-        <div><i class="fa-solid fa-snowflake"></i></div>
-        <p>Arctic</p>
-      </div>
+      
       
 
       <div class="tax-toggle">
